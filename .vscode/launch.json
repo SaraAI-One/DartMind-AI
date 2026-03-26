@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:DartMind-AI}",
+            "name": "Debug DartMind",
+            "target": "DartMind",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug DartMind"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:DartMind-AI}",
+            "name": "Release DartMind",
+            "target": "DartMind",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release DartMind"
+        }
+    ]
+}

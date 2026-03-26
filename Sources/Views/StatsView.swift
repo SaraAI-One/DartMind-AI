@@ -47,7 +47,8 @@ struct StatsView: View {
                         .padding(.horizontal)
                         .padding(.top)
                     
-                    ForEach(playerStats.recentMatches.reversed(), id: \.date) {
+                    let orderedMatches = playerStats.recentMatches.sorted(by: { $0.date > $1.date })
+                    ForEach(orderedMatches, id: \.date) {
                         match in
                         VStack(alignment: .leading) {
                             HStack {

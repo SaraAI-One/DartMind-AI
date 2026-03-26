@@ -6,7 +6,8 @@ struct HistoryView: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(matchHistory.reversed(), id: \.id) {
+                let orderedHistory = matchHistory.sorted(by: { $0.date > $1.date })
+                ForEach(orderedHistory, id: \.id) {
                     match in
                     VStack(alignment: .leading) {
                         HStack {
