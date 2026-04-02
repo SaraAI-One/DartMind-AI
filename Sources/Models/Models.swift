@@ -1,5 +1,19 @@
 import Foundation
 
+enum GameMode: String, CaseIterable {
+    case game501 = "501"
+    case game301 = "301"
+    case cricket = "Cricket"
+
+    var startingScore: Int {
+        switch self {
+        case .game501: return 501
+        case .game301: return 301
+        case .cricket: return 0
+        }
+    }
+}
+
 struct PlayerStats {
     var average: Double = 65.5
     var hundredEighty: Int = 12
